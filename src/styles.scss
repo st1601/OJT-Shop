@@ -2,14 +2,10 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
-<<<<<<< Updated upstream
-body{
+body {
   margin: 0;
 }
-=======
-/* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
 /* Importing Datepicker SCSS file. */
 @import "~ngx-bootstrap/datepicker/bs-datepicker";
->>>>>>> Stashed changes
