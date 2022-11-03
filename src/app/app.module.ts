@@ -1,9 +1,9 @@
 import { AuthInterceptor } from './auth.interceptor';
-
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -17,6 +17,7 @@ import { HomeComponent } from './component/home/home.component';
 import { AboutComponent } from './component/about/about.component';
 import { LoginComponent } from './component/login/login.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -39,10 +40,6 @@ import { ContactComponent } from './component/contact/contact.component';
         redirectTo: '/home',
         pathMatch: 'full',
       },
-      // {
-      //   path: 'login',
-      //   component: LoginComponent,
-      // },
       {
         path: 'home',
         component: HomeComponent,
@@ -68,6 +65,9 @@ import { ContactComponent } from './component/contact/contact.component';
         component: ContactComponent,
       },
     ]),
+    BrowserAnimationsModule,
+    TooltipModule.forRoot(),
+    CarouselModule.forRoot(),
   ],
   providers: [
     {
