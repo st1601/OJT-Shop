@@ -1,47 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="navb">
-    <a class="navbar-brand" routerLink="/"
-      ><img src="../../../assets/" class="logo-image" alt=""
-    /></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary row">
+  <a class="navbar-brand col-3" routerLink="/"
+    ><img src="../../../assets/img/logo.png" class="logo-image" alt=""
+  /></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav w-100">
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/home']">Home </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/products']">Product </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/about']">About </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/contact']">Contact </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/cart']">Cart </a>
-        </li>
-        <!-- <li class="nav-item active ml-auto" *ngIf="!authService.isLogIn()">
-          <a class="nav-link" [routerLink]="['/login']">Login </a>
-        </li>
-        <li class="nav-item active" *ngIf="!authService.isLogIn()">
-          <a class="nav-link" [routerLink]="['/signup']">Signup </a>
-        </li>
-        <li class="nav-item active ml-auto" *ngIf="authService.isLogIn()">
-          <a class="nav-link" href (click)="authService.logout()">Logout </a>
-        </li> -->
-      </ul>
-    </div>
+  <div class="collapse navbar-collapse col-6" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/home']">Home </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/products']">Product </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/about']">About </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/contact']">Contact </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/cart']">Cart </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="collapse navbar-collapse col-3" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100">
+      <li class="nav-item active ml-auto">
+        <a class="nav-link" [routerLink]="['/login']">Login </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/signup']">Signup </a>
+      </li>
+      <li class="nav-item active ml-auto">
+        <a class="nav-link" href>Logout </a>
+      </li>
+    </ul>
   </div>
 </nav>
