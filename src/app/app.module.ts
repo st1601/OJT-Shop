@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
@@ -13,6 +13,7 @@ import { ProductComponent } from './component/product/product.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './component/home/home.component';
 import { AboutComponent } from './component/about/about.component';
+import { LoginComponent } from './component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AboutComponent } from './component/about/about.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,10 @@ import { AboutComponent } from './component/about/about.component';
       {
         path: 'about',
         component: AboutComponent,
+      },
+      {
+        path: 'login',
+        component: LoginComponent,
       },
       {
         path: 'products',
