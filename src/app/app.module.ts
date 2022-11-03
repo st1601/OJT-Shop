@@ -1,3 +1,5 @@
+import { AuthInterceptor } from './auth.interceptor';
+
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +16,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './component/home/home.component';
 import { AboutComponent } from './component/about/about.component';
 import { LoginComponent } from './component/login/login.component';
+import { ContactComponent } from './component/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { LoginComponent } from './component/login/login.component';
     HomeComponent,
     AboutComponent,
     LoginComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,9 +63,19 @@ import { LoginComponent } from './component/login/login.component';
         path: 'cart',
         component: CartComponent,
       },
+      {
+        path: 'contact',
+        component: ContactComponent,
+      },
     ]),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
