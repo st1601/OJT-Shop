@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,12 +8,53 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
-import { MainComponent } from './component/main/main.component';
+import { CartComponent } from './component/cart/cart.component';
+import { ProductComponent } from './component/product/product.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { HomeComponent } from './component/home/home.component';
+import { AboutComponent } from './component/about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, MainComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    NavBarComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full',
+      },
+      // {
+      //   path: 'login',
+      //   component: LoginComponent,
+      // },
+      {
+        path: 'home',
+        component: HomeComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+      },
+      {
+        path: 'products',
+        component: ProductComponent,
+      },
+      {
+        path: 'cart',
+        component: CartComponent,
+      },
+    ]),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
