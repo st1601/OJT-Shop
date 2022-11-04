@@ -22,7 +22,7 @@
 // }
 
 .top-header-area {
-  position: absolute;
+  // position: absolute;
   z-index: 999;
   width: 100%;
   padding: 25px 0;
@@ -186,42 +186,42 @@ ul.sub-menu li:last-child {
   }
 }
 
-nav.main-menu {
-  ul {
-    ul.sub-menu li {
-      a {
-        color: #555;
-        padding: 8px;
-        font-size: 13px;
-        font-weight: 600;
-      }
+// nav.main-menu {
+//   ul {
+//     ul.sub-menu li {
+//       a {
+//         color: #555;
+//         padding: 8px;
+//         font-size: 13px;
+//         font-weight: 600;
+//       }
 
-      display: block;
-    }
+//       display: block;
+//     }
 
-    li.current-list-item > a {
-      color: orange;
-    }
-  }
+//     li.current-list-item > a {
+//       color: orange;
+//     }
+//   }
 
-  li {
-    &:hover > a {
-      color: orange;
-    }
+//   li {
+//     &:hover > a {
+//       color: orange;
+//     }
 
-    a {
-      transition: 0.3s;
-    }
-  }
-}
+//     a {
+//       transition: 0.3s;
+//     }
+//   }
+// }
 
-.top-header-area .header-icons div {
-  &:hover {
-    color: orange;
-  }
+// .top-header-area .header-icons div {
+//   &:hover {
+//     color: orange;
+//   }
 
-  transition: 0.3s;
-}
+//   transition: 0.3s;
+// }
 
 // .sticky-wrapper {
 //   position: absolute;
@@ -236,10 +236,10 @@ nav.main-menu {
 //   }
 // }
 
-.top-header-area {
-  transition: 0.3s;
-}
+// .top-header-area {
+//   transition: 0.3s;
+// }
 
-ul.navbar-nav {
-  margin: 0 auto;
-}
+// ul.navbar-nav {
+//   margin: 0 auto;
+// }
