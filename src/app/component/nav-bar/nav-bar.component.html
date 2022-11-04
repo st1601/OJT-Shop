@@ -5,7 +5,7 @@
         <div class="main-menu-wrap">
           <div class="site-logo">
             <a class="navbar-brand col-3" routerLink="/">
-              <img src="assets/img/logo.png" alt="" style="width: 150px" />
+              <img src="assets/img/lol.png" alt="" style="width: 150px" />
             </a>
           </div>
 
@@ -73,28 +73,32 @@
                       <i class="bi bi-person-circle"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                      <li>
+                      <li
+                        class="nav-item active ml-auto"
+                        *ngIf="!serService.isLogIn()"
+                      >
                         <a
-                          class="dropdown-item active"
-                          [routerLink]="['/cart']"
-                          routerLinkActive="active"
-                          >Action</a
+                          class="nav-link dropdown-item active"
+                          [routerLink]="['/login']"
+                          >Login</a
                         >
                       </li>
-                      <li>
+                      <li class="nav-item active" *ngIf="!serService.isLogIn()">
                         <a
-                          class="dropdown-item"
-                          [routerLink]="['/cart']"
-                          routerLinkActive="active"
-                          >Another action</a
+                          class="nav-link dropdown-item"
+                          [routerLink]="['/signup']"
+                          >Signup</a
                         >
                       </li>
-                      <li>
+                      <li
+                        lass="nav-item active ml-auto"
+                        *ngIf="serService.isLogIn()"
+                      >
                         <a
-                          class="dropdown-item"
-                          [routerLink]="['/cart']"
-                          routerLinkActive="active"
-                          >Sing</a
+                          class="nav-link dropdown-item"
+                          href
+                          (click)="serService.logout()"
+                          >Logout</a
                         >
                       </li>
                     </ul>

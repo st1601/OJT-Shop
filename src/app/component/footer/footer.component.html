@@ -25,10 +25,38 @@
         <div class="footer-box pages">
           <h2 class="widget-title">Pages</h2>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Shop</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a
+                class="nav-link"
+                [routerLink]="['/home']"
+                routerLinkActive="active"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                [routerLink]="['/about']"
+                routerLinkActive="active"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                [routerLink]="['/products']"
+                routerLinkActive="active"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                [routerLink]="['/contact']"
+                routerLinkActive="active"
+                >Contact</a
+              >
+            </li>
           </ul>
         </div>
       </div>
