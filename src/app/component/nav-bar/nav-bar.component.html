@@ -8,6 +8,7 @@
               <img src="assets/img/logo.png" alt="" style="width: 150px" />
             </a>
           </div>
+
           <nav class="main-menu">
             <ul>
               <li class="current-list-item">
@@ -52,15 +53,52 @@
               </li>
               <li>
                 <div class="header-icons">
-                  <a
+                  <div
                     class="nav-link shopping-cart"
                     [routerLink]="['/cart']"
                     routerLinkActive="active"
-                    ><i class="bi bi-basket"></i
-                  ></a>
-                  <a class="mobile-hide search-bar-icon" href="#"
-                    ><i class="bi bi-search"></i
-                  ></a>
+                  >
+                    <i class="bi bi-basket"></i>
+                  </div>
+                  <div class="mobile-hide search-bar-icon" href="#">
+                    <i class="bi bi-search"></i>
+                  </div>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-secondary dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="bi bi-person-circle"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li>
+                        <a
+                          class="dropdown-item active"
+                          [routerLink]="['/cart']"
+                          routerLinkActive="active"
+                          >Action</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          [routerLink]="['/cart']"
+                          routerLinkActive="active"
+                          >Another action</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          [routerLink]="['/cart']"
+                          routerLinkActive="active"
+                          >Sing</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
             </ul>

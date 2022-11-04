@@ -169,8 +169,8 @@ ul.sub-menu li:last-child {
 //   border-top: none;
 // }
 
-.header-icons a {
-  color: black;
+.header-icons div {
+  color: white;
   display: inline-block;
   padding: 10px;
 }
@@ -180,7 +180,8 @@ ul.sub-menu li:last-child {
 }
 
 .top-header-area.sepherate-header {
-  ul li > a, .header-icons a {
+  ul li > a,
+  .header-icons div {
     color: white;
   }
 }
@@ -214,7 +215,7 @@ nav.main-menu {
   }
 }
 
-.top-header-area .header-icons a {
+.top-header-area .header-icons div {
   &:hover {
     color: orange;
   }
@@ -242,4 +243,3 @@ nav.main-menu {
 ul.navbar-nav {
   margin: 0 auto;
 }
-
