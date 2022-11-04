@@ -18,6 +18,8 @@ import { AboutComponent } from './component/about/about.component';
 import { LoginComponent } from './component/login/login.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewComponent } from './component/new/new.component';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     LoginComponent,
     ContactComponent,
+    NewComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +67,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {
         path: 'contact',
         component: ContactComponent,
+      },
+      {
+        path: 'new',
+        component: NewComponent,
+      },
+      {
+        path: 'products/:id',
+        component: ProductDetailComponent,
       },
     ]),
     BrowserAnimationsModule,
