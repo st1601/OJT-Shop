@@ -20,6 +20,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewComponent } from './component/new/new.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,8 @@ import { ProductDetailComponent } from './component/product-detail/product-detai
     BrowserAnimationsModule,
     TooltipModule.forRoot(),
     CarouselModule.forRoot(),
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
   ],
   providers: [
     {
